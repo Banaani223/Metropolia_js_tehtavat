@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript testing</title>
+</head>
+<body>
+
+    <div id="Tupa"></div>
+
+    <script>
+        'use strict';
+
+        let name = prompt("Your name:")
+
+        function Random(max) {
+            return Math.floor(Math.random() * max) + 1;
+        }
+        let numero = Random(4);
+
+        let Value;
+
+        if (numero === 1){
+            Value = "Gryffindor";
+        }
+        else if (numero === 2){
+            Value = "Slytherin"
+        }
+        else if (numero === 3){
+            Value = "Hufflepuff"
+        }
+        else if (numero === 4){
+            Value = "Hufflepuff"
+        }
+
+        document.getElementById("Tupa").innerHTML = name + ", you are " + Value + "!";
+    </script>
+
+</body>
+</html>

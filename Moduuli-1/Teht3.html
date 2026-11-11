@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript testing</title>
+</head>
+<body>
+
+    <div id="keskiarvo"></div>
+
+    <script>
+        'use strict';
+
+        let numero = Number(prompt("Numero 1:"));
+        let numero2 = Number(prompt("Numero 2:"));
+        let numero3 = Number(prompt("Numero 3:"));
+
+
+        let summa = numero + numero2 + numero3;
+        let ka = summa / 3;
+
+        document.getElementById("keskiarvo").innerHTML = "Keskiarvo " + ka;
+    </script>
+
+</body>
+</html>

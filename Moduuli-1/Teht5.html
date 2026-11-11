@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript testing</title>
+</head>
+<body>
+
+    <div id="result"></div>
+
+    <script>
+        'use strict';
+
+        let year = Number(prompt("Enter your year:"));
+        let value = ""
+
+        if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+            value = "You were born on a leap year!";
+        } else {
+            value = "You were not born on a leap year.";
+        }
+
+        document.getElementById("result").innerHTML = value
+
+    </script>
+
+</body>
+</html>

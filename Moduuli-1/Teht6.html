@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript testing</title>
+</head>
+<body>
+
+    <div id="result"></div>
+
+    <script>
+        'use strict';
+
+        function confirmRoot() {
+            let resultText = "";
+            const confirmation = window.confirm("Should I calculate the square root?");
+
+            if (confirmation) {
+                let input = prompt("Enter number:");
+                let number = Number(input);
+
+                if (isNaN(number)) {
+                    resultText = "Please enter a valid number.";
+                } else if (number < 0) {
+                    resultText = "The square root of a negative number is not defined.";
+                } else {
+                    resultText = "The square root is: " + Math.sqrt(number);
+                }
+            } else {
+                resultText = "The square root is not calculated.";
+            }
+
+            document.getElementById("result").innerHTML = resultText;
+        }
+
+        confirmRoot();
+    </script>
+
+</body>
+</html>
