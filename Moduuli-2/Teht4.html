@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript testing</title>
+</head>
+<body>
+    <div id="result"></div>
+
+    <script>
+
+        let numbers = [];
+
+        let num = Number(prompt("Enter a number (0 stops):"));
+        while (num !== 0) {
+            numbers.push(num);
+            num = Number(prompt("Enter a number (0 stops):"));
+        }
+
+        numbers.sort((a, b) => a - b);
+
+        let HTML = "<ul>";
+        for (let i = 0; i < numbers.length; i++) {
+            HTML += "<li>" + numbers[i] + "</li>";
+        }
+        HTML += "</ul>";
+
+        document.getElementById("result").innerHTML = HTML;
+    </script>
+</body>
+</html>

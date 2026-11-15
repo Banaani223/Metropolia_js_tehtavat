@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript testing</title>
+</head>
+<body>
+    <div id="result"></div>
+
+    <script>
+
+        let count = prompt("How many participants are there?");
+        let participants = [];
+
+        for (let i = 0; i < count; i++) {
+            let name = prompt("Enter name for participant " + (i + 1));
+            participants.push(name);
+        }
+
+        participants.sort();
+
+        let HTML = "";
+        for (let i = 0; i < participants.length; i++) {
+            HTML += "<li>" + participants[i] + "</li>";
+        }
+
+        document.getElementById("result").innerHTML = HTML;
+    </script>
+</body>
+</html>

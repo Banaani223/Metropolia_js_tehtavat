@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript testing</title>
+</head>
+<body>
+    <div id="result"></div>
+
+    <script>
+        let dogs = [];
+
+        for (let i = 0; i < 6; i++) {
+            let name = prompt("Enter name for dog " + (i + 1));
+            dogs.push(name);
+        }
+
+        dogs.sort();
+        dogs.reverse();
+
+        let HTML = "";
+        for (let i = 0; i < dogs.length; i++) {
+            HTML += "<li>" + dogs[i] + "</li>";
+        }
+
+        document.getElementById("result").innerHTML = HTML;
+    </script>
+</body>
+</html>
